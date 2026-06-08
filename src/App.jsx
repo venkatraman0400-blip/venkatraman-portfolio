@@ -143,11 +143,11 @@ export default function App() {
       <nav>
         <a className="logo" href="#home">VENKATRAMAN<span> R.</span></a>
         <ul className={`nav-links${menuOpen ? ' open' : ''}`}>
-          {['home','about','skills','services','projects','education'].map(s => (
+          {['home','about','skills','services','projects','education','connect'].map(s => (
             <li key={s}><a href={`#${s}`} onClick={() => setMenuOpen(false)}>{s.charAt(0).toUpperCase() + s.slice(1)}</a></li>
           ))}
         </ul>
-        <button className="hire-btn" onClick={() => scrollTo('contact')}>Hire Me</button>
+        <button className="hire-btn" onClick={() => scrollTo('connect')}>Hire Me</button>
         <button className="mobile-menu-btn" onClick={() => setMenuOpen(!menuOpen)} aria-label="Menu">
           <span /><span /><span />
         </button>
@@ -349,8 +349,62 @@ export default function App() {
         </div>
       </section>
 
+      <div className="divider" />
 
-            {/* FOOTER */}
+      {/* LETS CONNECT */}
+      <section id="connect" style={{ background: 'var(--black)', textAlign: 'center', padding: '6rem 5%' }}>
+        <div className="fade-up" style={{ maxWidth: 680, margin: '0 auto' }}>
+          <div className="section-label" style={{ textAlign: 'center' }}>Open To Work</div>
+          <h2 className="section-title" style={{ fontSize: 'clamp(2rem,4vw,3.2rem)', textAlign: 'center' }}>
+            Ready to <em style={{ color: 'var(--gold)', fontStyle: 'italic' }}>Contribute</em> From Day One
+          </h2>
+          <div className="gold-line" style={{ margin: '1.5rem auto 2.5rem' }} />
+          <p style={{ color: 'var(--muted)', lineHeight: 1.9, fontSize: '0.97rem', fontWeight: 300, marginBottom: '3rem' }}>
+            Actively seeking entry-level roles in <strong style={{ color: 'var(--text)', fontWeight: 600 }}>Data Science · Machine Learning · AI Engineering</strong>. 
+            Every project in this portfolio was built to production standards — not just for practice. 
+            I bring rigour, curiosity, and the ability to turn messy data into business decisions.
+          </p>
+
+          {/* Stats Row */}
+          <div className="fade-up" style={{ display: 'grid', gridTemplateColumns: 'repeat(4, 1fr)', gap: '1.5rem', marginBottom: '3.5rem' }}>
+            {[
+              { num: '6', label: 'Projects Built' },
+              { num: '0.97+', label: 'Best AUC Score' },
+              { num: '0.94', label: 'Best Precision' },
+              { num: '~70%', label: 'ETL Time Saved' },
+            ].map(s => (
+              <div key={s.label} style={{ padding: '1.5rem 1rem', border: '1px solid var(--border)', background: 'var(--surface)' }}>
+                <div style={{ fontFamily: "'Playfair Display', serif", fontSize: '2rem', fontWeight: 900, color: 'var(--gold)', lineHeight: 1 }}>{s.num}</div>
+                <div style={{ fontSize: '0.68rem', letterSpacing: '0.12em', textTransform: 'uppercase', color: 'var(--muted)', marginTop: '0.5rem' }}>{s.label}</div>
+              </div>
+            ))}
+          </div>
+
+          {/* CTA Buttons */}
+          <div className="fade-up" style={{ display: 'flex', gap: '1rem', justifyContent: 'center', flexWrap: 'wrap', marginBottom: '3rem' }}>
+            <a href="mailto:venkatraman0400@gmail.com" className="btn-primary" style={{ display: 'inline-flex', alignItems: 'center', gap: '0.5rem' }}>
+              ✉ Email Me
+            </a>
+            <a href="https://www.linkedin.com/in/venkatraman0400/" target="_blank" rel="noreferrer" className="btn-outline" style={{ display: 'inline-flex', alignItems: 'center', gap: '0.5rem' }}>
+              💼 LinkedIn
+            </a>
+            <a href="https://github.com/venkatraman0400-blip" target="_blank" rel="noreferrer" className="btn-outline" style={{ display: 'inline-flex', alignItems: 'center', gap: '0.5rem' }}>
+              🖥 GitHub
+            </a>
+            <a href="/venkatraman-portfolio/venkatraman0400.pdf" download className="btn-outline" style={{ display: 'inline-flex', alignItems: 'center', gap: '0.5rem' }}>
+              ↓ Resume
+            </a>
+          </div>
+
+          {/* Availability tag */}
+          <div style={{ display: 'inline-flex', alignItems: 'center', gap: '0.7rem', border: '1px solid rgba(212,175,55,0.3)', padding: '0.6rem 1.4rem', fontSize: '0.8rem', color: 'var(--muted)', letterSpacing: '0.08em' }}>
+            <span style={{ width: 8, height: 8, background: '#4CAF50', borderRadius: '50%', display: 'inline-block', animation: 'pulse 2s infinite' }} />
+            Available immediately · Chennai, India · +91 97917 93938
+          </div>
+        </div>
+      </section>
+
+      {/* FOOTER */}
       <footer style={{ padding: '2.5rem 5%', borderTop: '1px solid var(--border)', display: 'flex', alignItems: 'center', justifyContent: 'space-between', flexWrap: 'wrap', gap: '1rem' }}>
         <div style={{ fontFamily: "'Playfair Display', serif", fontSize: '1.1rem', fontWeight: 900, color: 'var(--gold)' }}>VENKATRAMAN R.</div>
         <div style={{ fontSize: '0.72rem', color: 'var(--muted)' }}>© 2025 Venkatraman R — venkatraman0400@gmail.com · Chennai, India</div>
