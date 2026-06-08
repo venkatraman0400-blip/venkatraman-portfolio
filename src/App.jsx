@@ -143,7 +143,7 @@ export default function App() {
       <nav>
         <a className="logo" href="#home">VENKATRAMAN<span> R.</span></a>
         <ul className={`nav-links${menuOpen ? ' open' : ''}`}>
-          {['home','about','skills','services','projects','education','connect'].map(s => (
+          {['home','about','skills','services','projects','education'].map(s => (
             <li key={s}><a href={`#${s}`} onClick={() => setMenuOpen(false)}>{s.charAt(0).toUpperCase() + s.slice(1)}</a></li>
           ))}
         </ul>
