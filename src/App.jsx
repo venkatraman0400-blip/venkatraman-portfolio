@@ -209,7 +209,7 @@ export default function App() {
           </div>
           <div className="fade-up">
             <div className="section-label">About Me</div>
-            <h2 className="section-title">I Build Models That <em style={{ color: 'var(--gold)', fontStyle: 'italic' }}>Mean Something.</em></h2>
+            <h2 className="section-title">I Don't Just Build Models. I Build Models That <em style={{ color: 'var(--gold)', fontStyle: 'italic' }}>Mean Something.</em></h2>
             <div className="gold-line" />
             <p style={{ color: 'var(--muted)', lineHeight: 1.9, marginBottom: '1.2rem', fontSize: '0.95rem', fontWeight: 300 }}>
               I don't just study Data Science — I <strong style={{ color: 'var(--gold)', fontWeight: 600 }}>build with it</strong>. Every project in this portfolio was engineered to production standards: real datasets, real metrics, real business decisions behind every model choice.
