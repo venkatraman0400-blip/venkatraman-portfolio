@@ -143,7 +143,7 @@ export default function App() {
       <nav>
         <a className="logo" href="#home">VENKATRAMAN<span> R.</span></a>
         <ul className={`nav-links${menuOpen ? ' open' : ''}`}>
-          {['home','about','skills','services','projects','education','contact'].map(s => (
+          {['home','about','skills','services','projects','education'].map(s => (
             <li key={s}><a href={`#${s}`} onClick={() => setMenuOpen(false)}>{s.charAt(0).toUpperCase() + s.slice(1)}</a></li>
           ))}
         </ul>
@@ -349,61 +349,13 @@ export default function App() {
         </div>
       </section>
 
-      <div className="divider" />
 
-      {/* CONTACT */}
-      <section id="contact" style={{ background: 'var(--black)' }}>
-        <div className="fade-up" style={{ maxWidth: 700, marginBottom: '3.5rem' }}>
-          <div className="section-label">Get In Touch</div>
-          <h2 className="section-title">Let's Work <em style={{ color: 'var(--gold)', fontStyle: 'italic' }}>Together</em></h2>
-          <div className="gold-line" />
-          <p style={{ color: 'var(--muted)', lineHeight: 1.9, fontSize: '0.95rem', fontWeight: 300 }}>
-            Open to Data Scientist, ML Engineer, AI Engineer, and Data Analyst roles. Also available for freelance projects involving ML modelling, ETL pipelines, or GenAI applications. Reach out directly — I respond within 24 hours.
-          </p>
-        </div>
-
-        <div className="fade-up" style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fit, minmax(240px, 1fr))', gap: '1.5rem', marginBottom: '2.5rem' }}>
-          {[
-            { label: 'Email', emoji: '✉️', title: 'Send an Email', detail: 'venkatraman0400@gmail.com', href: 'mailto:venkatraman0400@gmail.com' },
-            { label: 'Phone', emoji: '📞', title: 'Call Me', detail: '+91 97917 93938', href: 'tel:+919791793938' },
-            { label: 'LinkedIn', emoji: '💼', title: 'Connect on LinkedIn', detail: 'linkedin.com/in/venkatraman0400', href: 'https://www.linkedin.com/in/venkatraman0400/', external: true },
-            { label: 'GitHub', emoji: '🖥️', title: 'View My Code', detail: 'github.com/venkatraman0400-blip', href: 'https://github.com/venkatraman0400-blip', external: true },
-          ].map(card => (
-            <a key={card.label} href={card.href} target={card.external ? '_blank' : undefined} rel={card.external ? 'noreferrer' : undefined} style={{ textDecoration: 'none' }}>
-              <div style={{ background: 'var(--surface)', border: '1px solid var(--border)', padding: '2rem', transition: 'border-color 0.3s, transform 0.3s', cursor: 'none', height: '100%' }}
-                onMouseEnter={e => { e.currentTarget.style.borderColor = 'var(--gold)'; e.currentTarget.style.transform = 'translateY(-4px)'; }}
-                onMouseLeave={e => { e.currentTarget.style.borderColor = 'var(--border)'; e.currentTarget.style.transform = 'translateY(0)'; }}>
-                <div style={{ fontSize: '0.65rem', letterSpacing: '0.2em', textTransform: 'uppercase', color: 'var(--gold)', marginBottom: '0.8rem' }}>{card.label}</div>
-                <div style={{ fontSize: '1.6rem', marginBottom: '0.8rem' }}>{card.emoji}</div>
-                <div style={{ fontSize: '0.95rem', fontWeight: 600, color: 'var(--text)', marginBottom: '0.4rem' }}>{card.title}</div>
-                <div style={{ fontSize: '0.82rem', color: 'var(--muted)', wordBreak: 'break-all' }}>{card.detail}</div>
-              </div>
-            </a>
-          ))}
-        </div>
-
-        <div className="fade-up" style={{ display: 'flex', alignItems: 'center', gap: '2.5rem', flexWrap: 'wrap', padding: '1.5rem 2rem', border: '1px solid var(--border)', background: 'var(--surface)' }}>
-          <div style={{ display: 'flex', alignItems: 'center', gap: '0.7rem' }}>
-            <div style={{ width: 5, height: 5, background: 'var(--gold)', flexShrink: 0 }} />
-            <span style={{ fontSize: '0.85rem', color: 'var(--muted)' }}>Chennai, Tamil Nadu, India</span>
-          </div>
-          <div style={{ display: 'flex', alignItems: 'center', gap: '0.7rem' }}>
-            <div style={{ width: 8, height: 8, background: '#4CAF50', borderRadius: '50%', animation: 'pulse 2s infinite', flexShrink: 0 }} />
-            <span style={{ fontSize: '0.85rem', color: 'var(--muted)' }}>Available immediately for full-time roles</span>
-          </div>
-          <div style={{ display: 'flex', alignItems: 'center', gap: '0.7rem' }}>
-            <div style={{ width: 5, height: 5, background: 'var(--gold)', flexShrink: 0 }} />
-            <span style={{ fontSize: '0.85rem', color: 'var(--muted)' }}>Responds within 24 hours</span>
-          </div>
-        </div>
-      </section>
-
-      {/* FOOTER */}
+            {/* FOOTER */}
       <footer style={{ padding: '2.5rem 5%', borderTop: '1px solid var(--border)', display: 'flex', alignItems: 'center', justifyContent: 'space-between', flexWrap: 'wrap', gap: '1rem' }}>
         <div style={{ fontFamily: "'Playfair Display', serif", fontSize: '1.1rem', fontWeight: 900, color: 'var(--gold)' }}>VENKATRAMAN R.</div>
         <div style={{ fontSize: '0.72rem', color: 'var(--muted)' }}>© 2025 Venkatraman R — venkatraman0400@gmail.com · Chennai, India</div>
         <div style={{ display: 'flex', gap: '1.5rem' }}>
-          {[['#home', 'Top'], ['#projects', 'Projects'], ['https://github.com/venkatraman0400-blip', 'GitHub'], ['#contact', 'Contact']].map(([href, label]) => (
+          {[['#home', 'Top'], ['#projects', 'Projects'], ['#education', 'Education'], ['https://github.com/venkatraman0400-blip', 'GitHub']].map(([href, label]) => (
             <a key={label} href={href} target={href.startsWith('http') ? '_blank' : undefined} rel={href.startsWith('http') ? 'noreferrer' : undefined}
               style={{ color: 'var(--muted)', fontSize: '0.78rem', textDecoration: 'none', transition: 'color 0.3s' }}
               onMouseEnter={e => e.currentTarget.style.color = 'var(--gold)'}
