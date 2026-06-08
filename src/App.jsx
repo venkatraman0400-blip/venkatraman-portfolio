@@ -353,46 +353,47 @@ export default function App() {
 
       {/* CONTACT */}
       <section id="contact" style={{ background: 'var(--black)' }}>
-        <div style={{ display: 'grid', gridTemplateColumns: '1fr 1.2fr', gap: '5rem', alignItems: 'start' }}>
-          <div className="fade-up">
-            <div className="section-label">Get In Touch</div>
-            <h2 className="section-title">Let's Work <em style={{ color: 'var(--gold)', fontStyle: 'italic' }}>Together</em></h2>
-            <div className="gold-line" />
-            <p style={{ color: 'var(--muted)', lineHeight: 1.9, fontSize: '0.93rem', fontWeight: 300, marginBottom: '2rem' }}>
-              Open to Data Scientist, ML Engineer, AI Engineer, and Data Analyst roles. Also available for freelance projects involving ML modelling, ETL pipelines, or GenAI applications.
-            </p>
-            {[
-              { icon: '📍', text: 'Chennai, Tamil Nadu, India' },
-              { icon: '📧', text: 'venkatraman0400@gmail.com', href: 'mailto:venkatraman0400@gmail.com' },
-              { icon: '📞', text: '+91 97917 93938', href: 'tel:+919791793938' },
-              { icon: '🟢', text: 'Available immediately' },
-            ].map(d => (
-              <div key={d.text} style={{ display: 'flex', alignItems: 'center', gap: '0.8rem', marginBottom: '1rem', color: 'var(--muted)', fontSize: '0.86rem' }}>
-                <div style={{ width: 5, height: 5, background: 'var(--gold)', flexShrink: 0 }} />
-                {d.href ? <a href={d.href} style={{ color: 'var(--muted)', textDecoration: 'none' }}>{d.text}</a> : <span>{d.text}</span>}
+        <div className="fade-up" style={{ maxWidth: 700, marginBottom: '3.5rem' }}>
+          <div className="section-label">Get In Touch</div>
+          <h2 className="section-title">Let's Work <em style={{ color: 'var(--gold)', fontStyle: 'italic' }}>Together</em></h2>
+          <div className="gold-line" />
+          <p style={{ color: 'var(--muted)', lineHeight: 1.9, fontSize: '0.95rem', fontWeight: 300 }}>
+            Open to Data Scientist, ML Engineer, AI Engineer, and Data Analyst roles. Also available for freelance projects involving ML modelling, ETL pipelines, or GenAI applications. Reach out directly — I respond within 24 hours.
+          </p>
+        </div>
+
+        <div className="fade-up" style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fit, minmax(240px, 1fr))', gap: '1.5rem', marginBottom: '2.5rem' }}>
+          {[
+            { label: 'Email', emoji: '✉️', title: 'Send an Email', detail: 'venkatraman0400@gmail.com', href: 'mailto:venkatraman0400@gmail.com' },
+            { label: 'Phone', emoji: '📞', title: 'Call Me', detail: '+91 97917 93938', href: 'tel:+919791793938' },
+            { label: 'LinkedIn', emoji: '💼', title: 'Connect on LinkedIn', detail: 'linkedin.com/in/venkatraman0400', href: 'https://www.linkedin.com/in/venkatraman0400/', external: true },
+            { label: 'GitHub', emoji: '🖥️', title: 'View My Code', detail: 'github.com/venkatraman0400-blip', href: 'https://github.com/venkatraman0400-blip', external: true },
+          ].map(card => (
+            <a key={card.label} href={card.href} target={card.external ? '_blank' : undefined} rel={card.external ? 'noreferrer' : undefined} style={{ textDecoration: 'none' }}>
+              <div style={{ background: 'var(--surface)', border: '1px solid var(--border)', padding: '2rem', transition: 'border-color 0.3s, transform 0.3s', cursor: 'none', height: '100%' }}
+                onMouseEnter={e => { e.currentTarget.style.borderColor = 'var(--gold)'; e.currentTarget.style.transform = 'translateY(-4px)'; }}
+                onMouseLeave={e => { e.currentTarget.style.borderColor = 'var(--border)'; e.currentTarget.style.transform = 'translateY(0)'; }}>
+                <div style={{ fontSize: '0.65rem', letterSpacing: '0.2em', textTransform: 'uppercase', color: 'var(--gold)', marginBottom: '0.8rem' }}>{card.label}</div>
+                <div style={{ fontSize: '1.6rem', marginBottom: '0.8rem' }}>{card.emoji}</div>
+                <div style={{ fontSize: '0.95rem', fontWeight: 600, color: 'var(--text)', marginBottom: '0.4rem' }}>{card.title}</div>
+                <div style={{ fontSize: '0.82rem', color: 'var(--muted)', wordBreak: 'break-all' }}>{card.detail}</div>
               </div>
-            ))}
-            <div style={{ display: 'flex', gap: '1rem', flexWrap: 'wrap', marginTop: '1.8rem' }}>
-              <a href="https://github.com/venkatraman0400-blip" target="_blank" rel="noreferrer" className="btn-outline" style={{ fontSize: '0.73rem', padding: '0.6rem 1.2rem' }}>GitHub ↗</a>
-              <a href="https://www.linkedin.com/in/venkatraman0400/" target="_blank" rel="noreferrer" className="btn-outline" style={{ fontSize: '0.73rem', padding: '0.6rem 1.2rem' }}>LinkedIn ↗</a>
-            </div>
+            </a>
+          ))}
+        </div>
+
+        <div className="fade-up" style={{ display: 'flex', alignItems: 'center', gap: '2.5rem', flexWrap: 'wrap', padding: '1.5rem 2rem', border: '1px solid var(--border)', background: 'var(--surface)' }}>
+          <div style={{ display: 'flex', alignItems: 'center', gap: '0.7rem' }}>
+            <div style={{ width: 5, height: 5, background: 'var(--gold)', flexShrink: 0 }} />
+            <span style={{ fontSize: '0.85rem', color: 'var(--muted)' }}>Chennai, Tamil Nadu, India</span>
           </div>
-          <div className="fade-up" style={{ display: 'flex', flexDirection: 'column', gap: '1rem' }}>
-            {[['Your Name', 'text', 'Name'], ['Email Address', 'email', 'email@company.com'], ['Subject', 'text', 'Job Opportunity / Collaboration']].map(([label, type, ph]) => (
-              <div key={label} style={{ display: 'flex', flexDirection: 'column', gap: '0.4rem' }}>
-                <label style={{ fontSize: '0.67rem', letterSpacing: '0.15em', textTransform: 'uppercase', color: 'var(--gold)' }}>{label}</label>
-                <input className="form-input" type={type} placeholder={ph} />
-              </div>
-            ))}
-            <div style={{ display: 'flex', flexDirection: 'column', gap: '0.4rem' }}>
-              <label style={{ fontSize: '0.67rem', letterSpacing: '0.15em', textTransform: 'uppercase', color: 'var(--gold)' }}>Message</label>
-              <textarea className="form-textarea" style={{ minHeight: 115 }} placeholder="Tell me about the role or project..." />
-            </div>
-            <button style={{ background: 'var(--gold)', color: 'var(--black)', border: 'none', padding: '1rem 2rem', fontFamily: "'DM Sans', sans-serif", fontSize: '0.82rem', fontWeight: 700, letterSpacing: '0.1em', textTransform: 'uppercase', cursor: 'none', transition: 'background 0.3s', alignSelf: 'flex-start' }}
-              onMouseEnter={e => e.currentTarget.style.background = 'var(--gold-light)'}
-              onMouseLeave={e => e.currentTarget.style.background = 'var(--gold)'}>
-              Send Message
-            </button>
+          <div style={{ display: 'flex', alignItems: 'center', gap: '0.7rem' }}>
+            <div style={{ width: 8, height: 8, background: '#4CAF50', borderRadius: '50%', animation: 'pulse 2s infinite', flexShrink: 0 }} />
+            <span style={{ fontSize: '0.85rem', color: 'var(--muted)' }}>Available immediately for full-time roles</span>
+          </div>
+          <div style={{ display: 'flex', alignItems: 'center', gap: '0.7rem' }}>
+            <div style={{ width: 5, height: 5, background: 'var(--gold)', flexShrink: 0 }} />
+            <span style={{ fontSize: '0.85rem', color: 'var(--muted)' }}>Responds within 24 hours</span>
           </div>
         </div>
       </section>
