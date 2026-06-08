@@ -147,7 +147,7 @@ export default function App() {
             <li key={s}><a href={`#${s}`} onClick={() => setMenuOpen(false)}>{s.charAt(0).toUpperCase() + s.slice(1)}</a></li>
           ))}
         </ul>
-        <button className="hire-btn" onClick={() => scrollTo('connect')}>Hire Me</button>
+        <button className="hire-btn" onClick={() => window.location.href="mailto:venkatraman0400@gmail.com"}>Hire Me</button>
         <button className="mobile-menu-btn" onClick={() => setMenuOpen(!menuOpen)} aria-label="Menu">
           <span /><span /><span />
         </button>
@@ -212,13 +212,16 @@ export default function App() {
             <h2 className="section-title">Turning Data Into <em style={{ color: 'var(--gold)', fontStyle: 'italic' }}>Decisions</em></h2>
             <div className="gold-line" />
             <p style={{ color: 'var(--muted)', lineHeight: 1.9, marginBottom: '1.2rem', fontSize: '0.95rem', fontWeight: 300 }}>
-              I'm <strong style={{ color: 'var(--gold)', fontWeight: 600 }}>Venkatraman R</strong>, a Data Science & AI Engineer based in Chennai, India. My work sits at the intersection of statistical rigour and real-world impact — building models that don't just score high on benchmarks, but actually solve business problems.
+              I don't just study Data Science — I <strong style={{ color: 'var(--gold)', fontWeight: 600 }}>build with it</strong>. Every project in this portfolio was engineered to production standards: real datasets, real metrics, real business decisions behind every model choice.
             </p>
             <p style={{ color: 'var(--muted)', lineHeight: 1.9, marginBottom: '1.2rem', fontSize: '0.95rem', fontWeight: 300 }}>
-              From detecting financial fraud with <strong style={{ color: 'var(--gold)', fontWeight: 600 }}>XGBoost + SHAP explainability</strong> to building GenAI applications with <strong style={{ color: 'var(--gold)', fontWeight: 600 }}>LangChain, RAG, and OpenAI APIs</strong>, every project here was built to demonstrate production-level thinking.
+              My fraud detection system hits <strong style={{ color: 'var(--gold)', fontWeight: 600 }}>AUC 0.97+ with SHAP explainability</strong> — not just a number, but a model a compliance team can actually trust and audit. My anomaly detection pipeline achieves <strong style={{ color: 'var(--gold)', fontWeight: 600 }}>Precision 0.94, Recall 0.89</strong> with threshold tuning optimised for real business cost — not leaderboard glory.
             </p>
             <p style={{ color: 'var(--muted)', lineHeight: 1.9, marginBottom: '1.2rem', fontSize: '0.95rem', fontWeight: 300 }}>
-              B.E. graduate seeking entry-level DS/ML/AI roles where I can bring this portfolio-grade rigour to real business challenges from day one.
+              I work across the full data stack — <strong style={{ color: 'var(--gold)', fontWeight: 600 }}>ML modelling, ETL pipelines, GenAI applications, and BI dashboards</strong>. I ask the business question first, then build the solution. That's the difference between a data scientist and someone who just runs models.
+            </p>
+            <p style={{ color: 'var(--muted)', lineHeight: 1.9, marginBottom: '1.2rem', fontSize: '0.95rem', fontWeight: 300 }}>
+              If you need someone who ships <strong style={{ color: 'var(--gold)', fontWeight: 600 }}>clean, explainable, impact-driven work</strong> from day one — scroll down. The proof is in the projects.
             </p>
             <a href="/venkatraman-portfolio/venkatraman0400.pdf" download style={{ display: 'inline-flex', alignItems: 'center', gap: '0.6rem', marginTop: '1rem', background: 'transparent', border: '1px solid var(--gold)', color: 'var(--gold)', padding: '0.8rem 1.6rem', fontSize: '0.78rem', letterSpacing: '0.1em', textTransform: 'uppercase', cursor: 'none', transition: 'all 0.3s', fontFamily: "'DM Sans', sans-serif", textDecoration: 'none' }}
               onMouseEnter={e => { e.currentTarget.style.background = 'var(--gold)'; e.currentTarget.style.color = 'var(--black)' }}
@@ -335,7 +338,7 @@ export default function App() {
             <div style={{ background: 'var(--black)', border: '1px solid var(--border)', padding: '2rem', position: 'relative', overflow: 'hidden', marginBottom: '1.5rem' }}>
               <div style={{ position: 'absolute', top: 0, left: 0, width: 3, height: '100%', background: 'var(--gold)' }} />
               <div style={{ fontSize: '1rem', fontWeight: 600, color: 'var(--text)', marginBottom: '0.5rem' }}>Blood Donation</div>
-              <div style={{ fontSize: '0.85rem', color: 'var(--muted)', lineHeight: 1.8, marginBottom: '1.2rem', fontWeight: 300 }}>Voluntary blood donor at two hospitals in Chennai — contributing to community health initiatives beyond professional work.</div>
+              <div style={{ fontSize: '0.85rem', color: 'var(--muted)', lineHeight: 1.8, marginBottom: '1.2rem', fontWeight: 300 }}>Voluntary blood donor at two major hospitals — contributing to community health initiatives beyond professional work.</div>
               <div style={{ display: 'flex', flexWrap: 'wrap', gap: '0.6rem' }}>
                 <span style={{ fontSize: '0.72rem', padding: '0.3rem 0.8rem', border: '1px solid rgba(212,175,55,0.3)', color: 'rgba(212,175,55,0.8)' }}>Hindu Mission Hospital · Mar 2023</span>
                 <span style={{ fontSize: '0.72rem', padding: '0.3rem 0.8rem', border: '1px solid rgba(212,175,55,0.3)', color: 'rgba(212,175,55,0.8)' }}>Sri Ramachandra Hospital · Jul 2024</span>
@@ -399,7 +402,7 @@ export default function App() {
           {/* Availability tag */}
           <div style={{ display: 'inline-flex', alignItems: 'center', gap: '0.7rem', border: '1px solid rgba(212,175,55,0.3)', padding: '0.6rem 1.4rem', fontSize: '0.8rem', color: 'var(--muted)', letterSpacing: '0.08em' }}>
             <span style={{ width: 8, height: 8, background: '#4CAF50', borderRadius: '50%', display: 'inline-block', animation: 'pulse 2s infinite' }} />
-            Available immediately · Chennai, India · +91 97917 93938
+            Available immediately · Open to full-time DS / ML / AI roles
           </div>
         </div>
       </section>
@@ -407,7 +410,7 @@ export default function App() {
       {/* FOOTER */}
       <footer style={{ padding: '2.5rem 5%', borderTop: '1px solid var(--border)', display: 'flex', alignItems: 'center', justifyContent: 'space-between', flexWrap: 'wrap', gap: '1rem' }}>
         <div style={{ fontFamily: "'Playfair Display', serif", fontSize: '1.1rem', fontWeight: 900, color: 'var(--gold)' }}>VENKATRAMAN R.</div>
-        <div style={{ fontSize: '0.72rem', color: 'var(--muted)' }}>© 2025 Venkatraman R — venkatraman0400@gmail.com · Chennai, India</div>
+        <div style={{ fontSize: '0.72rem', color: 'var(--muted)' }}>© 2025 Venkatraman R — Data Science & AI Engineer</div>
         <div style={{ display: 'flex', gap: '1.5rem' }}>
           {[['#home', 'Top'], ['#projects', 'Projects'], ['#education', 'Education'], ['https://github.com/venkatraman0400-blip', 'GitHub']].map(([href, label]) => (
             <a key={label} href={href} target={href.startsWith('http') ? '_blank' : undefined} rel={href.startsWith('http') ? 'noreferrer' : undefined}
