@@ -45,7 +45,7 @@ const PROJECTS = [
     metrics: ['1,000+ Records', '~70% Time Saved'],
     stack: ['BeautifulSoup', 'Selenium', 'Pandas', 'Python'],
     status: 'completed',
-    github: 'https://github.com/venkatraman0400-blip/storydata-eda',
+    github: 'https://github.com/venkatraman0400-blip/DataHunt',
   },
   {
     flag: 'Data Storytelling',
