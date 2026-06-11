@@ -48,6 +48,15 @@ const PROJECTS = [
     github: 'https://github.com/venkatraman0400-blip/DataHunt',
   },
   {
+    flag: 'Deep Learning · Forecasting',
+    title: 'SalesPulse Forecaster',
+    desc: 'LSTM-based 12-month sales forecaster on Global Superstore data. 2-layer LSTM with SQL data pipeline — predicts $3.59M in future revenue with MAE of $126K.',
+    metrics: ['LSTM 128→64', 'MAE $126K', '12-Month Forecast'],
+    stack: ['TensorFlow', 'Keras', 'SQL', 'Pandas', 'Scikit-Learn', 'Python'],
+    status: 'completed',
+    github: 'https://github.com/venkatraman0400-blip/SalesPulse-Forecaster',
+  },
+  {
     flag: 'Data Storytelling',
     title: 'StoryData',
     desc: 'Narrative-driven EDA on the Ames Housing dataset using animated Plotly charts, heatmaps, and distribution plots to communicate statistical insights to non-technical audiences.',
