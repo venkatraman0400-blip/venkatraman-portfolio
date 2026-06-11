@@ -9,6 +9,7 @@ const PROJECTS = [
     metrics: ['AUC 0.97+', 'F1 0.92', 'SHAP Explained'],
     stack: ['XGBoost', 'SMOTE', 'Scikit-Learn', 'Pandas', 'Python'],
     status: 'completed',
+    github: 'https://github.com/venkatraman0400-blip/Mobile-Fnancial-Transaction-Fraud-Detection',
   },
   {
     flag: 'Flagship · ML',
@@ -17,14 +18,25 @@ const PROJECTS = [
     metrics: ['Precision 0.94', 'Recall 0.89', 'SHAP Report'],
     stack: ['XGBoost', 'Random Forest', 'Scikit-Learn', 'Pandas', 'Matplotlib'],
     status: 'completed',
+    github: 'https://github.com/venkatraman0400-blip/BankShield',
   },
   {
-    flag: 'GenAI · In Progress',
-    title: 'AskMyData',
-    desc: 'GenAI application where users upload datasets and query in plain English. LangChain agents auto-generate Pandas/SQL analysis code using RAG and prompt engineering.',
-    metrics: ['RAG Architecture', 'LLM Agents'],
-    stack: ['LangChain', 'OpenAI API', 'RAG', 'Streamlit', 'Prompt Engineering'],
-    status: 'progress',
+    flag: 'Business Intelligence · Power BI',
+    title: 'SalesPulse',
+    desc: 'Executive-grade Power BI dashboard on Global Superstore data. 44 custom DAX measures, star schema design, time intelligence, and regional KPI tracking — built for C-suite decision-making.',
+    metrics: ['44 DAX Measures', 'Star Schema', 'Time Intelligence'],
+    stack: ['Power BI', 'DAX', 'Power Query', 'Star Schema', 'Data Modelling'],
+    status: 'completed',
+    github: 'https://github.com/venkatraman0400-blip/SalesPulse-PowerBI-Dashboard',
+  },
+  {
+    flag: 'Fleet Analytics · Excel',
+    title: 'Vehicle Maintenance Dashboard',
+    desc: 'Interactive fleet management dashboard across 50,000 vehicles. Tracks maintenance needs, fuel efficiency, battery health, and warranty status with risk scoring across 6 vehicle types and 3 fuel categories.',
+    metrics: ['50,000 Vehicles', 'Risk Scoring', '6 Vehicle Types'],
+    stack: ['Microsoft Excel', 'Pivot Tables', 'Slicers', 'Conditional Formatting', 'Charts'],
+    status: 'completed',
+    github: 'https://github.com/venkatraman0400-blip/vehicle_maintenance-Dashboard',
   },
   {
     flag: 'Data Engineering',
@@ -33,22 +45,16 @@ const PROJECTS = [
     metrics: ['1,000+ Records', '~70% Time Saved'],
     stack: ['BeautifulSoup', 'Selenium', 'Pandas', 'Python'],
     status: 'completed',
+    github: 'https://github.com/venkatraman0400-blip/storydata-eda',
   },
   {
-    flag: 'Business Intelligence',
-    title: 'SalesPulse',
-    desc: 'Dynamic multi-KPI dashboard tracking revenue trends and regional sales. Automated data refresh via Power Query, reducing manual reporting time by 60%.',
-    metrics: ['Multi-KPI', '60% Time Saved'],
-    stack: ['Excel', 'Pivot Tables', 'Power Query', 'Slicers'],
-    status: 'completed',
-  },
-  {
-    flag: 'Data Storytelling · In Progress',
+    flag: 'Data Storytelling',
     title: 'StoryData',
-    desc: 'Narrative-driven EDA on a Kaggle dataset using animated Plotly charts, heatmaps, and distribution plots to communicate statistical insights to non-technical audiences.',
-    metrics: ['Visual Narrative', 'Stakeholder Ready'],
+    desc: 'Narrative-driven EDA on the Ames Housing dataset using animated Plotly charts, heatmaps, and distribution plots to communicate statistical insights to non-technical audiences.',
+    metrics: ['Visual Narrative', 'Stakeholder Ready', 'Animated Charts'],
     stack: ['Python', 'Plotly', 'Seaborn', 'Pandas'],
-    status: 'progress',
+    status: 'completed',
+    github: 'https://github.com/venkatraman0400-blip/storydata-eda',
   },
 ]
 
@@ -294,9 +300,17 @@ export default function App() {
               <div style={{ display: 'flex', flexWrap: 'wrap', gap: '0.45rem', marginBottom: '1rem' }}>
                 {p.metrics.map(m => <span key={m} style={{ fontSize: '0.68rem', background: 'rgba(212,175,55,0.07)', border: '1px solid rgba(212,175,55,0.22)', color: '#F0D060', padding: '0.22rem 0.6rem' }}>{m}</span>)}
               </div>
-              <div style={{ display: 'flex', flexWrap: 'wrap', gap: '0.4rem' }}>
+              <div style={{ display: 'flex', flexWrap: 'wrap', gap: '0.4rem', marginBottom: '1rem' }}>
                 {p.stack.map(t => <span key={t} style={{ fontSize: '0.66rem', color: 'var(--muted)', border: '1px solid var(--border)', padding: '0.18rem 0.52rem' }}>{t}</span>)}
               </div>
+              {p.github && (
+                <a href={p.github} target="_blank" rel="noreferrer"
+                  style={{ fontSize: '0.72rem', color: 'var(--gold)', textDecoration: 'none', letterSpacing: '0.08em', display: 'inline-flex', alignItems: 'center', gap: '0.3rem', border: '1px solid rgba(212,175,55,0.3)', padding: '0.3rem 0.8rem', transition: 'all 0.2s' }}
+                  onMouseEnter={e => { e.currentTarget.style.background = 'rgba(212,175,55,0.1)' }}
+                  onMouseLeave={e => { e.currentTarget.style.background = 'transparent' }}>
+                  🖥 View on GitHub ↗
+                </a>
+              )}
             </div>
           ))}
         </div>
@@ -371,7 +385,7 @@ export default function App() {
           {/* Stats Row */}
           <div className="fade-up" style={{ display: 'grid', gridTemplateColumns: 'repeat(4, 1fr)', gap: '1.5rem', marginBottom: '3.5rem' }}>
             {[
-              { num: '6', label: 'Projects Built' },
+              { num: '7', label: 'Projects Built' },
               { num: '0.97+', label: 'Best AUC Score' },
               { num: '0.94', label: 'Best Precision' },
               { num: '~70%', label: 'ETL Time Saved' },
@@ -410,7 +424,7 @@ export default function App() {
       {/* FOOTER */}
       <footer style={{ padding: '2.5rem 5%', borderTop: '1px solid var(--border)', display: 'flex', alignItems: 'center', justifyContent: 'space-between', flexWrap: 'wrap', gap: '1rem' }}>
         <div style={{ fontFamily: "'Playfair Display', serif", fontSize: '1.1rem', fontWeight: 900, color: 'var(--gold)' }}>VENKATRAMAN R.</div>
-        <div style={{ fontSize: '0.72rem', color: 'var(--muted)' }}>© 2025 Venkatraman R — Data Science & AI Engineer</div>
+        <div style={{ fontSize: '0.72rem', color: 'var(--muted)' }}>© 2026 Venkatraman R — Data Science & AI Engineer</div>
         <div style={{ display: 'flex', gap: '1.5rem' }}>
           {[['#home', 'Top'], ['#projects', 'Projects'], ['#education', 'Education'], ['https://github.com/venkatraman0400-blip', 'GitHub']].map(([href, label]) => (
             <a key={label} href={href} target={href.startsWith('http') ? '_blank' : undefined} rel={href.startsWith('http') ? 'noreferrer' : undefined}
