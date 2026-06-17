@@ -3,6 +3,16 @@ import profilePhoto from './assets/venkatraman.jpg'
 
 const PROJECTS = [
   {
+    flag: 'GenAI · Deployed',
+    title: 'AskMyData',
+    desc: 'Upload any dataset and query it in plain English. A LangChain LCEL agent auto-selects pandas or SQL, retrieves per-column schema context via FAISS RAG, maintains windowed conversation memory, and returns a plain-English answer, generated code, and an auto-generated Plotly chart — deployed live on Streamlit Cloud.',
+    metrics: ['FAISS RAG', 'Multi-turn Memory', 'Live Demo'],
+    stack: ['LangChain', 'FAISS', 'Groq Llama-3.3-70b', 'OpenAI GPT-4o', 'Streamlit', 'Python'],
+    status: 'completed',
+    demo: 'https://askmydata-icuwyzrksfgm4zjktn4tdq.streamlit.app',
+    github: 'https://github.com/venkatraman0400-blip/askmydata',
+  },
+  {
     flag: 'Flagship · ML',
     title: 'FraudGuard',
     desc: 'End-to-end fraud detection pipeline on imbalanced mobile transaction data. SHAP explainability provides per-transaction audit trails critical for financial compliance.',
@@ -190,7 +200,7 @@ export default function App() {
           </div>
         </div>
         <div style={{ position: 'absolute', right: '5%', bottom: '12%', display: 'flex', flexDirection: 'column', gap: '2rem', textAlign: 'right' }}>
-          {[['6', 'Projects Built'], ['0.97', 'Best AUC Score'], ['0.94', 'Best Precision']].map(([n, l]) => (
+          {[['7', 'Projects Built'], ['0.97', 'Best AUC Score'], ['0.94', 'Best Precision']].map(([n, l]) => (
             <div key={l}>
               <div style={{ fontFamily: "'Playfair Display', serif", fontSize: '2.4rem', fontWeight: 900, color: 'var(--gold)', lineHeight: 1 }}>{n}</div>
               <div style={{ fontSize: '0.65rem', letterSpacing: '0.15em', textTransform: 'uppercase', color: 'var(--muted)', marginTop: '0.2rem' }}>{l}</div>
@@ -312,14 +322,24 @@ export default function App() {
               <div style={{ display: 'flex', flexWrap: 'wrap', gap: '0.4rem', marginBottom: '1rem' }}>
                 {p.stack.map(t => <span key={t} style={{ fontSize: '0.66rem', color: 'var(--muted)', border: '1px solid var(--border)', padding: '0.18rem 0.52rem' }}>{t}</span>)}
               </div>
+              <div style={{ display: 'flex', gap: '0.5rem', flexWrap: 'wrap' }}>
+              {p.demo && (
+                <a href={p.demo} target="_blank" rel="noreferrer"
+                  style={{ fontSize: '0.72rem', color: 'var(--black)', background: 'var(--gold)', textDecoration: 'none', letterSpacing: '0.08em', display: 'inline-flex', alignItems: 'center', gap: '0.3rem', padding: '0.3rem 0.8rem', fontWeight: 600, transition: 'opacity 0.2s' }}
+                  onMouseEnter={e => { e.currentTarget.style.opacity = '0.85' }}
+                  onMouseLeave={e => { e.currentTarget.style.opacity = '1' }}>
+                  🚀 Live Demo ↗
+                </a>
+              )}
               {p.github && (
                 <a href={p.github} target="_blank" rel="noreferrer"
                   style={{ fontSize: '0.72rem', color: 'var(--gold)', textDecoration: 'none', letterSpacing: '0.08em', display: 'inline-flex', alignItems: 'center', gap: '0.3rem', border: '1px solid rgba(212,175,55,0.3)', padding: '0.3rem 0.8rem', transition: 'all 0.2s' }}
                   onMouseEnter={e => { e.currentTarget.style.background = 'rgba(212,175,55,0.1)' }}
                   onMouseLeave={e => { e.currentTarget.style.background = 'transparent' }}>
-                  🖥 View on GitHub ↗
+                  🖥 GitHub ↗
                 </a>
               )}
+              </div>
             </div>
           ))}
         </div>
