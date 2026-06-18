@@ -333,3 +333,86 @@ section {
     display: none;
   }
 }
+
+/* ═══════════════════════════════════════════════════════════════
+   RESPONSIVE DESIGN
+   ═══════════════════════════════════════════════════════════════ */
+
+/* ── Tablet (≤900px) ──────────────────────────────────────────── */
+@media (max-width: 900px) {
+  section { padding: 4rem 6%; }
+
+  /* 2-column layouts (about, education) stack */
+  .grid-2col {
+    grid-template-columns: 1fr !important;
+    gap: 3rem !important;
+  }
+
+  /* Hero floating stats move into normal flow, horizontal */
+  .hero-stats {
+    position: static !important;
+    flex-direction: row !important;
+    text-align: left !important;
+    gap: 2.5rem !important;
+    margin-top: 3rem;
+    flex-wrap: wrap;
+  }
+}
+
+/* ── Phone (≤768px) ───────────────────────────────────────────── */
+@media (max-width: 768px) {
+  /* Kill custom cursor — use native pointer on touch */
+  .cursor, .cursor-ring { display: none !important; }
+  body, a, button,
+  .btn-primary, .btn-outline, .hire-btn, .mobile-menu-btn {
+    cursor: auto !important;
+  }
+
+  section { padding: 3.5rem 6%; }
+  nav { padding: 1rem 6%; }
+
+  .section-title { font-size: clamp(1.6rem, 6vw, 2.2rem) !important; }
+
+  /* Hero CTA buttons full-width stacked */
+  .hero-cta { flex-direction: column; width: 100%; }
+  .hero-cta .btn-primary,
+  .hero-cta .btn-outline { width: 100%; text-align: center; }
+
+  /* Hero floating stats spacing */
+  .hero-stats { gap: 1.8rem !important; }
+
+  /* Connect 4-col stats → 2 columns */
+  .stat-grid { grid-template-columns: repeat(2, 1fr) !important; gap: 1rem !important; }
+
+  /* Connect CTA buttons full-width stacked */
+  .cta-row { flex-direction: column; }
+  .cta-row .btn-primary,
+  .cta-row .btn-outline { width: 100%; justify-content: center; }
+
+  /* About resume buttons full-width */
+  .resume-row { flex-direction: column; }
+  .resume-row a { width: 100%; justify-content: center; }
+
+  /* Footer stacks + centers */
+  footer {
+    flex-direction: column !important;
+    text-align: center;
+    gap: 1.2rem !important;
+  }
+
+  /* Cards tighter padding */
+  .skill-card, .project-card { padding: 1.5rem !important; }
+}
+
+/* ── Small phone (≤420px) ─────────────────────────────────────── */
+@media (max-width: 420px) {
+  section { padding: 3rem 5%; }
+  .logo { font-size: 1.15rem !important; }
+  .stat-grid { grid-template-columns: 1fr 1fr !important; }
+}
+
+/* ── Touch devices: always hide custom cursor ─────────────────── */
+@media (hover: none) and (pointer: coarse) {
+  .cursor, .cursor-ring { display: none !important; }
+  body, a, button { cursor: auto !important; }
+}
