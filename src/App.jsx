@@ -193,12 +193,12 @@ export default function App() {
           <p style={{ fontSize: '0.97rem', color: 'var(--muted)', lineHeight: 1.85, maxWidth: 520, marginBottom: '2.2rem', fontWeight: 300 }}>
             I build and deploy intelligent data systems — fraud-detection ML models with SHAP explainability, GenAI applications powered by LangChain and RAG, and BI dashboards that turn raw data into business decisions. Eight projects, four live in production.
           </p>
-          <div style={{ display: 'flex', gap: '1rem', flexWrap: 'wrap' }}>
+          <div className="hero-cta" style={{ display: 'flex', gap: '1rem', flexWrap: 'wrap' }}>
             <a href="#projects" className="btn-primary">View My Work</a>
             <a href="#connect" className="btn-outline">Contact Me</a>
           </div>
         </div>
-        <div style={{ position: 'absolute', right: '5%', bottom: '12%', display: 'flex', flexDirection: 'column', gap: '2rem', textAlign: 'right' }}>
+        <div className="hero-stats" style={{ position: 'absolute', right: '5%', bottom: '12%', display: 'flex', flexDirection: 'column', gap: '2rem', textAlign: 'right' }}>
           {[['8', 'Projects Built'], ['0.97', 'Best AUC Score'], ['4', 'Live Deployed Apps']].map(([n, l]) => (
             <div key={l}>
               <div style={{ fontFamily: "'Playfair Display', serif", fontSize: '2.4rem', fontWeight: 900, color: 'var(--gold)', lineHeight: 1 }}>{n}</div>
@@ -216,7 +216,7 @@ export default function App() {
 
       {/* ABOUT */}
       <section id="about" style={{ background: 'var(--surface)' }}>
-        <div style={{ display: 'grid', gridTemplateColumns: '1fr 1.4fr', gap: '5rem', alignItems: 'center' }}>
+        <div className="grid-2col" style={{ display: 'grid', gridTemplateColumns: '1fr 1.4fr', gap: '5rem', alignItems: 'center' }}>
           <div className="fade-up" style={{ position: 'relative' }}>
             <div style={{ position: 'absolute', top: -12, left: -12, width: 60, height: 60, borderTop: '2px solid var(--gold)', borderLeft: '2px solid var(--gold)', zIndex: 2 }} />
             <div style={{ position: 'absolute', bottom: -12, right: -12, width: 60, height: 60, borderBottom: '2px solid var(--gold)', borderRight: '2px solid var(--gold)', zIndex: 2 }} />
@@ -267,7 +267,7 @@ export default function App() {
             <p style={{ color: 'var(--muted)', lineHeight: 1.9, marginBottom: '1.2rem', fontSize: '0.95rem', fontWeight: 300 }}>
               If you need someone who ships <strong style={{ color: 'var(--gold)', fontWeight: 600 }}>clean, explainable, impact-driven work</strong> from day one — scroll down. The proof is in the projects.
             </p>
-            <div style={{ display: 'flex', gap: '0.8rem', marginTop: '1rem', flexWrap: 'wrap' }}>
+            <div className="resume-row" style={{ display: 'flex', gap: '0.8rem', marginTop: '1rem', flexWrap: 'wrap' }}>
             <a href="/venkatraman-portfolio/venkatraman0400.pdf" target="_blank" rel="noreferrer" style={{ display: 'inline-flex', alignItems: 'center', gap: '0.6rem', background: 'var(--gold)', border: '1px solid var(--gold)', color: 'var(--black)', padding: '0.8rem 1.6rem', fontSize: '0.78rem', letterSpacing: '0.1em', textTransform: 'uppercase', cursor: 'none', transition: 'all 0.3s', fontFamily: "'DM Sans', sans-serif", textDecoration: 'none', fontWeight: 600 }}
               onMouseEnter={e => { e.currentTarget.style.opacity = '0.85' }}
               onMouseLeave={e => { e.currentTarget.style.opacity = '1' }}>
@@ -375,7 +375,7 @@ export default function App() {
 
       {/* EDUCATION + VOLUNTEERING */}
       <section id="education" style={{ background: 'var(--surface)' }}>
-        <div style={{ display: 'grid', gridTemplateColumns: '1fr 1fr', gap: '5rem', alignItems: 'start' }}>
+        <div className="grid-2col" style={{ display: 'grid', gridTemplateColumns: '1fr 1fr', gap: '5rem', alignItems: 'start' }}>
           <div className="fade-up">
             <div className="section-label">Academic Background</div>
             <h2 className="section-title" style={{ fontSize: 'clamp(1.6rem,2.8vw,2.4rem)' }}>Education</h2>
@@ -438,7 +438,7 @@ export default function App() {
           </p>
 
           {/* Stats Row */}
-          <div className="fade-up" style={{ display: 'grid', gridTemplateColumns: 'repeat(4, 1fr)', gap: '1.5rem', marginBottom: '3.5rem' }}>
+          <div className="fade-up stat-grid" style={{ display: 'grid', gridTemplateColumns: 'repeat(4, 1fr)', gap: '1.5rem', marginBottom: '3.5rem' }}>
             {[
               { num: '8', label: 'Projects Built' },
               { num: '0.97+', label: 'Best AUC Score' },
@@ -453,7 +453,7 @@ export default function App() {
           </div>
 
           {/* CTA Buttons */}
-          <div className="fade-up" style={{ display: 'flex', gap: '1rem', justifyContent: 'center', flexWrap: 'wrap', marginBottom: '3rem' }}>
+          <div className="fade-up cta-row" style={{ display: 'flex', gap: '1rem', justifyContent: 'center', flexWrap: 'wrap', marginBottom: '3rem' }}>
             <a href="https://mail.google.com/mail/?view=cm&fs=1&to=venkatraman0400@gmail.com&su=Opportunity%20-%20Data%20Science%20%2F%20AI%20Role" target="_blank" rel="noreferrer" className="btn-primary" style={{ display: 'inline-flex', alignItems: 'center', gap: '0.5rem' }}>
               ✉ Email Me
             </a>
