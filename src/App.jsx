@@ -172,7 +172,7 @@ export default function App() {
             <li key={s}><a href={`#${s}`} onClick={() => setMenuOpen(false)}>{s.charAt(0).toUpperCase() + s.slice(1)}</a></li>
           ))}
         </ul>
-        <button className="hire-btn" onClick={() => window.location.href="mailto:venkatraman0400@gmail.com"}>Hire Me</button>
+        <button className="hire-btn" onClick={() => window.open("https://mail.google.com/mail/?view=cm&fs=1&to=venkatraman0400@gmail.com&su=Opportunity%20-%20Data%20Science%20%2F%20AI%20Role", "_blank")}>Hire Me</button>
         <button className="mobile-menu-btn" onClick={() => setMenuOpen(!menuOpen)} aria-label="Menu">
           <span /><span /><span />
         </button>
@@ -435,7 +435,7 @@ export default function App() {
 
           {/* CTA Buttons */}
           <div className="fade-up" style={{ display: 'flex', gap: '1rem', justifyContent: 'center', flexWrap: 'wrap', marginBottom: '3rem' }}>
-            <a href="mailto:venkatraman0400@gmail.com" className="btn-primary" style={{ display: 'inline-flex', alignItems: 'center', gap: '0.5rem' }}>
+            <a href="https://mail.google.com/mail/?view=cm&fs=1&to=venkatraman0400@gmail.com&su=Opportunity%20-%20Data%20Science%20%2F%20AI%20Role" target="_blank" rel="noreferrer" className="btn-primary" style={{ display: 'inline-flex', alignItems: 'center', gap: '0.5rem' }}>
               ✉ Email Me
             </a>
             <a href="https://www.linkedin.com/in/venkatraman0400/" target="_blank" rel="noreferrer" className="btn-outline" style={{ display: 'inline-flex', alignItems: 'center', gap: '0.5rem' }}>
