@@ -248,11 +248,18 @@ export default function App() {
             <p style={{ color: 'var(--muted)', lineHeight: 1.9, marginBottom: '1.2rem', fontSize: '0.95rem', fontWeight: 300 }}>
               If you need someone who ships <strong style={{ color: 'var(--gold)', fontWeight: 600 }}>clean, explainable, impact-driven work</strong> from day one — scroll down. The proof is in the projects.
             </p>
-            <a href="/venkatraman-portfolio/venkatraman0400.pdf" download style={{ display: 'inline-flex', alignItems: 'center', gap: '0.6rem', marginTop: '1rem', background: 'transparent', border: '1px solid var(--gold)', color: 'var(--gold)', padding: '0.8rem 1.6rem', fontSize: '0.78rem', letterSpacing: '0.1em', textTransform: 'uppercase', cursor: 'none', transition: 'all 0.3s', fontFamily: "'DM Sans', sans-serif", textDecoration: 'none' }}
+            <div style={{ display: 'flex', gap: '0.8rem', marginTop: '1rem', flexWrap: 'wrap' }}>
+            <a href="/venkatraman-portfolio/venkatraman0400.pdf" target="_blank" rel="noreferrer" style={{ display: 'inline-flex', alignItems: 'center', gap: '0.6rem', background: 'var(--gold)', border: '1px solid var(--gold)', color: 'var(--black)', padding: '0.8rem 1.6rem', fontSize: '0.78rem', letterSpacing: '0.1em', textTransform: 'uppercase', cursor: 'none', transition: 'all 0.3s', fontFamily: "'DM Sans', sans-serif", textDecoration: 'none', fontWeight: 600 }}
+              onMouseEnter={e => { e.currentTarget.style.opacity = '0.85' }}
+              onMouseLeave={e => { e.currentTarget.style.opacity = '1' }}>
+              ⊙ View Resume
+            </a>
+            <a href="/venkatraman-portfolio/venkatraman0400.pdf" download style={{ display: 'inline-flex', alignItems: 'center', gap: '0.6rem', background: 'transparent', border: '1px solid var(--gold)', color: 'var(--gold)', padding: '0.8rem 1.6rem', fontSize: '0.78rem', letterSpacing: '0.1em', textTransform: 'uppercase', cursor: 'none', transition: 'all 0.3s', fontFamily: "'DM Sans', sans-serif", textDecoration: 'none' }}
               onMouseEnter={e => { e.currentTarget.style.background = 'var(--gold)'; e.currentTarget.style.color = 'var(--black)' }}
               onMouseLeave={e => { e.currentTarget.style.background = 'transparent'; e.currentTarget.style.color = 'var(--gold)' }}>
               ↓ Download Resume
             </a>
+            </div>
           </div>
         </div>
       </section>
@@ -436,6 +443,9 @@ export default function App() {
             </a>
             <a href="https://github.com/venkatraman0400-blip" target="_blank" rel="noreferrer" className="btn-outline" style={{ display: 'inline-flex', alignItems: 'center', gap: '0.5rem' }}>
               🖥 GitHub
+            </a>
+            <a href="/venkatraman-portfolio/venkatraman0400.pdf" target="_blank" rel="noreferrer" className="btn-outline" style={{ display: 'inline-flex', alignItems: 'center', gap: '0.5rem' }}>
+              ⊙ View
             </a>
             <a href="/venkatraman-portfolio/venkatraman0400.pdf" download className="btn-outline" style={{ display: 'inline-flex', alignItems: 'center', gap: '0.5rem' }}>
               ↓ Resume
