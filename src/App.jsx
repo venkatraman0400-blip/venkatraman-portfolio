@@ -195,7 +195,7 @@ export default function App() {
           </p>
           <div style={{ display: 'flex', gap: '1rem', flexWrap: 'wrap' }}>
             <a href="#projects" className="btn-primary">View My Work</a>
-            <a href="#contact" className="btn-outline">Contact Me</a>
+            <a href="#connect" className="btn-outline">Contact Me</a>
           </div>
         </div>
         <div style={{ position: 'absolute', right: '5%', bottom: '12%', display: 'flex', flexDirection: 'column', gap: '2rem', textAlign: 'right' }}>
