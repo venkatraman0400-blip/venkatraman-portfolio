@@ -1,5 +1,4 @@
 import { useEffect, useRef, useState } from 'react'
-import profilePhoto from './assets/venkatraman.jpg'
 
 const PROJECTS = [
   {
@@ -192,7 +191,7 @@ export default function App() {
             {roleText}<span style={{ display: 'inline-block', width: 3, height: '1em', background: 'var(--gold)', marginLeft: 3, verticalAlign: 'text-bottom', animation: 'blink 1s infinite' }} />
           </div>
           <p style={{ fontSize: '0.97rem', color: 'var(--muted)', lineHeight: 1.85, maxWidth: 520, marginBottom: '2.2rem', fontWeight: 300 }}>
-            I build intelligent data systems — from fraud-detecting ML models with SHAP explainability to end-to-end ETL pipelines and GenAI applications. Turning raw data into real business impact.
+            I build and deploy intelligent data systems — fraud-detection ML models with SHAP explainability, GenAI applications powered by LangChain and RAG, and BI dashboards that turn raw data into business decisions. Eight projects, four live in production.
           </p>
           <div style={{ display: 'flex', gap: '1rem', flexWrap: 'wrap' }}>
             <a href="#projects" className="btn-primary">View My Work</a>
@@ -200,7 +199,7 @@ export default function App() {
           </div>
         </div>
         <div style={{ position: 'absolute', right: '5%', bottom: '12%', display: 'flex', flexDirection: 'column', gap: '2rem', textAlign: 'right' }}>
-          {[['7', 'Projects Built'], ['0.97', 'Best AUC Score'], ['0.94', 'Best Precision']].map(([n, l]) => (
+          {[['8', 'Projects Built'], ['0.97', 'Best AUC Score'], ['4', 'Live Deployed Apps']].map(([n, l]) => (
             <div key={l}>
               <div style={{ fontFamily: "'Playfair Display', serif", fontSize: '2.4rem', fontWeight: 900, color: 'var(--gold)', lineHeight: 1 }}>{n}</div>
               <div style={{ fontSize: '0.65rem', letterSpacing: '0.15em', textTransform: 'uppercase', color: 'var(--muted)', marginTop: '0.2rem' }}>{l}</div>
@@ -218,18 +217,38 @@ export default function App() {
       {/* ABOUT */}
       <section id="about" style={{ background: 'var(--surface)' }}>
         <div style={{ display: 'grid', gridTemplateColumns: '1fr 1.4fr', gap: '5rem', alignItems: 'center' }}>
-          <div className="fade-up" style={{ position: 'relative', paddingBottom: '1.2rem' }}>
-            <div style={{ position: 'relative' }}>
-              <div style={{ position: 'absolute', top: -12, left: -12, width: 60, height: 60, borderTop: '2px solid var(--gold)', borderLeft: '2px solid var(--gold)', zIndex: 2 }} />
-              <div style={{ position: 'absolute', bottom: -12, right: -12, width: 60, height: 60, borderBottom: '2px solid var(--gold)', borderRight: '2px solid var(--gold)', zIndex: 2 }} />
-              <div style={{ width: '100%', aspectRatio: '3/4', border: '1px solid rgba(212,175,55,0.6)', position: 'relative', overflow: 'hidden' }}>
-                <div style={{ position: 'absolute', inset: 0, background: 'linear-gradient(180deg,rgba(8,8,8,0.05) 0%,rgba(8,8,8,0) 50%,rgba(8,8,8,0.65) 100%)', zIndex: 1, pointerEvents: 'none' }} />
-                <img src={profilePhoto} alt="Venkatraman R" style={{ width: '100%', height: '100%', objectFit: 'cover', objectPosition: 'center top', display: 'block', filter: 'grayscale(20%) sepia(20%) contrast(1.1) brightness(0.88) hue-rotate(5deg)' }} />
+          <div className="fade-up" style={{ position: 'relative' }}>
+            <div style={{ position: 'absolute', top: -12, left: -12, width: 60, height: 60, borderTop: '2px solid var(--gold)', borderLeft: '2px solid var(--gold)', zIndex: 2 }} />
+            <div style={{ position: 'absolute', bottom: -12, right: -12, width: 60, height: 60, borderBottom: '2px solid var(--gold)', borderRight: '2px solid var(--gold)', zIndex: 2 }} />
+            <div style={{ border: '1px solid rgba(212,175,55,0.5)', background: 'var(--black)', padding: '2.2rem 2rem', position: 'relative', overflow: 'hidden' }}>
+              <div style={{ position: 'absolute', inset: 0, backgroundImage: 'linear-gradient(rgba(212,175,55,0.05) 1px,transparent 1px),linear-gradient(90deg,rgba(212,175,55,0.05) 1px,transparent 1px)', backgroundSize: '28px 28px', pointerEvents: 'none' }} />
+              <div style={{ position: 'relative', zIndex: 1 }}>
+                <div style={{ fontSize: '0.68rem', color: 'rgba(212,175,55,0.85)', marginBottom: '1.4rem', letterSpacing: '0.18em', textTransform: 'uppercase', fontWeight: 600 }}>Profile Snapshot</div>
+
+                <div style={{ display: 'flex', flexDirection: 'column', gap: '1.1rem' }}>
+                  {[
+                    ['Role', 'Data Science & AI Engineer'],
+                    ['Location', 'Chennai, India'],
+                    ['Focus', 'ML · GenAI · Analytics'],
+                    ['Certification', 'Data Science with AI — BIA'],
+                    ['Status', 'Open to full-time roles'],
+                  ].map(([k, v]) => (
+                    <div key={k} style={{ display: 'flex', justifyContent: 'space-between', alignItems: 'baseline', gap: '1rem', borderBottom: '1px solid rgba(212,175,55,0.12)', paddingBottom: '0.8rem' }}>
+                      <span style={{ fontSize: '0.68rem', letterSpacing: '0.12em', textTransform: 'uppercase', color: 'var(--muted)' }}>{k}</span>
+                      <span style={{ fontSize: '0.85rem', color: 'var(--text)', textAlign: 'right', fontWeight: 500 }}>{v}</span>
+                    </div>
+                  ))}
+                </div>
+
+                <div style={{ display: 'grid', gridTemplateColumns: '1fr 1fr', gap: '1rem', marginTop: '1.6rem' }}>
+                  {[['8', 'Projects'], ['0.97', 'Best AUC'], ['4', 'Live Apps'], ['6+', 'Tech Domains']].map(([n, l]) => (
+                    <div key={l} style={{ border: '1px solid var(--border)', padding: '0.9rem', textAlign: 'center' }}>
+                      <div style={{ fontFamily: "'Playfair Display', serif", fontSize: '1.6rem', fontWeight: 900, color: 'var(--gold)', lineHeight: 1 }}>{n}</div>
+                      <div style={{ fontSize: '0.6rem', letterSpacing: '0.1em', textTransform: 'uppercase', color: 'var(--muted)', marginTop: '0.4rem' }}>{l}</div>
+                    </div>
+                  ))}
+                </div>
               </div>
-            </div>
-            <div style={{ position: 'absolute', bottom: '1.5rem', right: '-1.2rem', background: 'var(--black)', border: '1px solid var(--gold)', padding: '0.8rem 1.3rem' }}>
-              <div style={{ fontFamily: "'Playfair Display', serif", fontSize: '2rem', color: 'var(--gold)', fontWeight: 900, lineHeight: 1 }}>'25</div>
-              <div style={{ fontSize: '0.6rem', letterSpacing: '0.12em', textTransform: 'uppercase', color: 'var(--muted)' }}>DS / AI Fresher</div>
             </div>
           </div>
           <div className="fade-up">
@@ -421,10 +440,10 @@ export default function App() {
           {/* Stats Row */}
           <div className="fade-up" style={{ display: 'grid', gridTemplateColumns: 'repeat(4, 1fr)', gap: '1.5rem', marginBottom: '3.5rem' }}>
             {[
-              { num: '7', label: 'Projects Built' },
+              { num: '8', label: 'Projects Built' },
               { num: '0.97+', label: 'Best AUC Score' },
+              { num: '4', label: 'Live Deployed Apps' },
               { num: '0.94', label: 'Best Precision' },
-              { num: '~70%', label: 'ETL Time Saved' },
             ].map(s => (
               <div key={s.label} style={{ padding: '1.5rem 1rem', border: '1px solid var(--border)', background: 'var(--surface)' }}>
                 <div style={{ fontFamily: "'Playfair Display', serif", fontSize: '2rem', fontWeight: 900, color: 'var(--gold)', lineHeight: 1 }}>{s.num}</div>
