@@ -50,9 +50,9 @@ const PROJECTS = [
   {
     flag: 'Data Engineering',
     title: 'DataHunt',
-    desc: 'Automated extraction of 1,000+ structured records from e-commerce and job portals. Data-cleaning workflows produced analysis-ready CSVs, cutting manual collection time by ~70%.',
-    metrics: ['1,000+ Records', '~70% Time Saved'],
-    stack: ['BeautifulSoup', 'Selenium', 'Pandas', 'Python'],
+    desc: 'Modular ETL pipeline processing 51,000+ records end-to-end. Independently swappable Extractor → Cleaner → Storage → Reporter modules output Parquet and multi-sheet Excel simultaneously, with configurable strategies and a full audit trail.',
+    metrics: ['51K+ Records', 'Parquet + Excel', 'Audit Trail'],
+    stack: ['Python', 'Pandas', 'Parquet', 'openpyxl', 'pyarrow'],
     status: 'completed',
     github: 'https://github.com/venkatraman0400-blip/DataHunt',
   },
