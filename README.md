@@ -10,7 +10,7 @@
 
 ## 🔗 Live Portfolio
 
-**[venkatraman0400-blip.github.io/venkatraman-portfolio](https://venkatraman0400-blip.github.io/venkatraman-portfolio/)**
+**[venkatraman0400-blip.github.io/venkatraman-portfolio](https://github.com/venkatraman0400-blip/venkatraman-portfolio/blob/main/Venmatraman_r.pdf)**
 
 ---
 
