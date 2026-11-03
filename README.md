@@ -34,7 +34,7 @@ venkatraman-portfolio/
 │   └── workflows/
 │       └── deploy.yml          # Auto GitHub Pages deployment
 ├── public/
-│   └── venkatraman0400.pdf     # Resume (downloadable)
+│   └── Venkatraman_R_Resume.pdf # Resume (downloadable)
 ├── src/
 │   ├── assets/
 │   │   └── venkatraman.jpg     # Profile photo
