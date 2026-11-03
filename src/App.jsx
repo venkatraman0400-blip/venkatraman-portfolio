@@ -30,6 +30,15 @@ const PROJECTS = [
     github: 'https://github.com/venkatraman0400-blip/BankShield',
   },
   {
+    flag: 'R&D · Multimodal ML',
+    title: 'Multimodal Industrial Quality Inspection',
+    desc: 'Independent R&D project on industrial quality inspection using sound and images. Audio (MFCC, spectral) and visual (HOG) classifiers are combined with OR-based decision fusion to flag NG parts, plus a production-line monitor and a sensor-shift investigation that traced a station alarm spike to a microphone change.',
+    metrics: ['Acoustic ROC-AUC 0.874', 'Visual ROC-AUC 0.737', 'Decision-level Fusion'],
+    stack: ['Python', 'Scikit-Learn', 'librosa', 'scikit-image', 'Pandas', 'NumPy'],
+    status: 'completed',
+    github: 'https://github.com/venkatraman0400-blip/Multimodal-Industrial-Quality-Inspection',
+  },
+  {
     flag: 'Business Intelligence · Power BI',
     title: 'SalesPulse',
     desc: 'Executive-grade Power BI dashboard on Global Superstore data. 44 custom DAX measures, star schema design, time intelligence, and regional KPI tracking — built for C-suite decision-making.',
